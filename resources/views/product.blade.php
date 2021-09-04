@@ -1,7 +1,9 @@
 @extends("main")
 
 @section("import")
-  <link rel="stylesheet" href="{{ github_fetch_content("/storage/css/product.css") }}">
+  <style>
+    {{ github_fetch_content('/storage/app/public/css/product.css') }}
+  </style>
 @endsection
 
 @section("content")
@@ -28,7 +30,7 @@
       @foreach($product as $i)
         <a href="{{ url("/product/".$i->image) }}" class="product-card row g-0">
           <div class="product-image col-md-4">
-            <img src="{{ github_fetch("storage/picture/".$i->category."/".$i->ProductImage.".PNG") }}" class="img-fluid rounded-start" alt="Images">
+            <img src="{{ github_fetch("/storage/app/public/picture/".$i->category."/".$i->image.".PNG") }}" class="img-fluid rounded-start" alt="Images">
           </div>
           <div class="col-md-8">
             <div class="card-body">

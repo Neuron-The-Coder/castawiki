@@ -1,7 +1,9 @@
 @extends("main")
 
 @section("import")
-  <link rel="stylesheet" href="{{ asset("storage/css/productdetail.css") }}">
+<style>
+  {{ github_fetch_content('/storage/app/public/css/productdetail.css') }}
+</style>
 @endsection
 
 @section("content")
@@ -10,7 +12,7 @@
 
     <div class="product-container">
       <div class="product-image">
-        <img src="{{ github_fetch("/storage/picture/".$product->category."/".$product->image.".PNG") }}" class="img-fluid rounded-start" alt="Images">
+        <img src="{{ github_fetch("/storage/app/public/picture/".$product->category."/".$product->image.".PNG") }}" class="img-fluid rounded-start" alt="Images">
       </div>
 
       <div class="line-break">
