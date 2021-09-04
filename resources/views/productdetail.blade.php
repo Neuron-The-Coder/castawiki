@@ -12,6 +12,7 @@
       <div class="product-image">
         <img src="{{ asset("storage/picture/".$product->category."/".$product->image.".PNG") }}" class="img-fluid rounded-start" alt="Images">
       </div>
+      
       <div class="line-break">
         
       </div>
